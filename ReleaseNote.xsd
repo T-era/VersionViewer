@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/ReleaseNote" elementFormDefault="qualified" targetNamespace="http://tempuri.org/ReleaseNote" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Version">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" ref="Application" />
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Major" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Major">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Minor" />
+      </xs:sequence>
+      <xs:attribute name="number" type="xs:string" use="required" />
+      <xs:attribute name="note" type="xs:string" />
+      <xs:attribute name="description" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Minor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Revision" />
+      </xs:sequence>
+      <xs:attribute name="number" type="xs:string" use="required" />
+      <xs:attribute name="note" type="xs:string" />
+      <xs:attribute name="description" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Revision">
+    <xs:complexType>
+      <xs:attribute name="number" type="xs:string" use="required" />
+      <xs:attribute name="note" type="xs:string" />
+      <xs:attribute name="description" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Application">
+    <xs:complexType>
+      <xs:attribute name="name" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

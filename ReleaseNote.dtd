@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT Version (Application?, Major*)>
+<!ELEMENT Major (Minor*)>
+<!ELEMENT Minor (Revision*)>
+<!ELEMENT Revision EMPTY>
+<!ELEMENT Application EMPTY>
+
+<!ATTLIST Application name CDATA #IMPLIED>
+
+<!ATTLIST Major number CDATA #REQUIRED>
+<!ATTLIST Minor number CDATA #REQUIRED>
+<!ATTLIST Revision number  CDATA #REQUIRED>
+
+<!ATTLIST Major note CDATA #IMPLIED>
+<!ATTLIST Minor note CDATA #IMPLIED>
+<!ATTLIST Revision note CDATA #IMPLIED>
+
+<!ATTLIST Major description CDATA #IMPLIED>
+<!ATTLIST Minor description CDATA #IMPLIED>
+<!ATTLIST Revision description CDATA #IMPLIED>

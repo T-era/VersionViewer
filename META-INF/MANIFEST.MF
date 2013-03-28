@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Class-Path: commons-beanutils.jar commons-betwixt-0.7.jar commons-digester.jar commons-logging.jar
